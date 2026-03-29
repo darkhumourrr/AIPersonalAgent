@@ -33,6 +33,15 @@ This repository now contains:
   - `SummarizeInput`, `SummarizeResult`
   - `SendEmailInput`, `SendEmailResult`
 
+
+## Merge consistency note
+
+To avoid Step 1/Step 2 PR conflicts, this branch keeps Step 2 as an additive layer on top of Step 1:
+
+- Step 1 APIs (`/` and `/health`) remain unchanged
+- Step 2 introduces tools and schemas without breaking Step 1 endpoints
+- A dedicated compatibility test verifies wrapper integration across both steps
+
 ## Planned next steps
 
 3. Build LangGraph workflow (planning + tool calling)
